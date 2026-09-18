@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ryu.projects",
+  "version": "0.1.0",
+  "description": "A durable coordinator workspace for turning long-running work into owned tasks, shared context, delegated workers, and recurring signals without replacing Ryu's CRM, Calendar, or Workflows.",
+  "author": {
+    "name": "Ryu",
+    "url": "https://ryuhq.com"
+  },
+  "homepage": "https://github.com/amajorai/ryu-projects",
+  "repository": "https://github.com/amajorai/ryu-projects",
+  "keywords": [
+    "projects",
+    "tasks",
+    "planning",
+    "delivery",
+    "operations"
+  ],
+  "extensions": {
+    "com.ryuhq.ryu": {
+      "id": "@ryu/projects",
+      "displayName": "Projects"
+    }
+  }
+}
