@@ -1,0 +1,33 @@
+[package]
+name = "ryu-projects"
+version = "0.4.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "Durable Cursor-style Projects coordinator sidecar for Ryu."
+repository = "https://github.com/amajorai/ryu"
+
+[[bin]]
+name = "ryu-projects"
+path = "src/main.rs"
+
+[lib]
+name = "ryu_projects"
+path = "src/lib.rs"
+
+[dependencies]
+anyhow = "1"
+axum = "0.7"
+chrono = { version = "0.4", features = ["serde"] }
+humantime = "2"
+reqwest = { version = "0.12", features = ["json"] }
+rusqlite = { version = "0.40.0", features = ["bundled"] }
+ryu-sidecar-runtime = { path = "../crates/core/sidecar-runtime", version = "0.4.0" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["full"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+uuid = { version = "1", features = ["v4"] }
+
+[dev-dependencies]
+tower = { version = "0.5", features = ["util"] }
