@@ -1,0 +1,624 @@
+{
+  "version": 1,
+  "package": "projects",
+  "scope": "partial",
+  "expectedRows": 47,
+  "selector": {
+    "spec": "e2e/projects-companion.spec.ts",
+    "config": "e2e/projects-companion.playwright.config.ts"
+  },
+  "evidenceBoundary": "The compiled Projects Companion runs in local Chromium with a deterministic app.request bridge fixture. Assertions prove rendered UI state, request payloads, optimistic rollback, and user retries; they do not prove the Projects backend/database, Core proxy, real coordinator or worker execution, webhook delivery, or Ryu Spaces synchronization.",
+  "assertions": [
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "850",
+        "component": "App",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "creates a project from the toolbar and persists the exact project fields",
+      "assertionName": "Toolbar action opens the create dialog",
+      "assertionMarker": "New project"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "861",
+        "component": "App",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "keeps a task after a failed save, lets the user retry, and advances task status",
+      "assertionName": "Dismissing a failed save removes the alert",
+      "assertionMarker": "Dismiss"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "900",
+        "component": "App",
+        "tag": "NativeSelect",
+        "events": "onChange"
+      },
+      "testTitle": "filters projects and opens the selected project detail",
+      "assertionName": "Project filter limits the visible saved project options",
+      "assertionMarker": "Project filter"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "923",
+        "component": "App",
+        "tag": "RyuAppListItem",
+        "events": "onClick"
+      },
+      "testTitle": "filters projects and opens the selected project detail",
+      "assertionName": "Selecting a filtered option opens its project detail",
+      "assertionMarker": "Service migration"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1003",
+        "component": "App",
+        "tag": "Textarea",
+        "events": "onChange"
+      },
+      "testTitle": "saves context, retries coordinator and subscription requests, and dispatches a worker",
+      "assertionName": "Coordinator prompt stays visible for a retry",
+      "assertionMarker": "Coordinator request"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1009",
+        "component": "App",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "saves context, retries coordinator and subscription requests, and dispatches a worker",
+      "assertionName": "Coordinator dispatch retries and establishes the fixture thread",
+      "assertionMarker": "Run coordinator"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1032",
+        "component": "App",
+        "tag": "form",
+        "events": "onSubmit"
+      },
+      "testTitle": "keeps a task after a failed save, lets the user retry, and advances task status",
+      "assertionName": "Task form submits the task through project persistence",
+      "assertionMarker": "Add task"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1033",
+        "component": "App",
+        "tag": "Input",
+        "events": "onChange"
+      },
+      "testTitle": "keeps a task after a failed save, lets the user retry, and advances task status",
+      "assertionName": "New task input retains its value after a failed save",
+      "assertionMarker": "New task"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1042",
+        "component": "App",
+        "tag": "Button",
+        "events": ""
+      },
+      "testTitle": "keeps a task after a failed save, lets the user retry, and advances task status",
+      "assertionName": "Add task retry persists the task and clears the input",
+      "assertionMarker": "Add task"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1076",
+        "component": "App",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "keeps a task after a failed save, lets the user retry, and advances task status",
+      "assertionName": "Task status control persists the next status",
+      "assertionMarker": "Move Prepare launch notes to next status"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1121",
+        "component": "App",
+        "tag": "form",
+        "events": "onSubmit"
+      },
+      "testTitle": "saves context, retries coordinator and subscription requests, and dispatches a worker",
+      "assertionName": "Context form retries a rejected save",
+      "assertionMarker": "Save context"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1125",
+        "component": "App",
+        "tag": "Input",
+        "events": "onChange"
+      },
+      "testTitle": "saves context, retries coordinator and subscription requests, and dispatches a worker",
+      "assertionName": "Context title remains available after a rejected save",
+      "assertionMarker": "Context title"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1131",
+        "component": "App",
+        "tag": "Textarea",
+        "events": "onChange"
+      },
+      "testTitle": "saves context, retries coordinator and subscription requests, and dispatches a worker",
+      "assertionName": "Context content is submitted with the note",
+      "assertionMarker": "Context content"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1137",
+        "component": "App",
+        "tag": "Button",
+        "events": ""
+      },
+      "testTitle": "saves context, retries coordinator and subscription requests, and dispatches a worker",
+      "assertionName": "Saving context renders the saved note",
+      "assertionMarker": "Save context"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1159",
+        "component": "App",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "opens project creation from the empty-state action",
+      "assertionName": "Empty-state action opens project creation",
+      "assertionMarker": "No projects here"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1181",
+        "component": "App",
+        "tag": "NativeSelect",
+        "events": "onChange"
+      },
+      "testTitle": "creates a project from the toolbar and persists the exact project fields",
+      "assertionName": "Project status change is persisted through the API",
+      "assertionMarker": "Project status"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1208",
+        "component": "App",
+        "tag": "Input",
+        "events": "onChange"
+      },
+      "testTitle": "creates a project from the toolbar and persists the exact project fields",
+      "assertionName": "Owner edit is reflected and persisted",
+      "assertionMarker": "Project owner"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1218",
+        "component": "App",
+        "tag": "NativeSelect",
+        "events": "onChange"
+      },
+      "testTitle": "creates a project from the toolbar and persists the exact project fields",
+      "assertionName": "Execution target edit is reflected and persisted",
+      "assertionMarker": "Project execution mode"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1513",
+        "component": "App",
+        "tag": "form",
+        "events": "onSubmit"
+      },
+      "testTitle": "saves context, retries coordinator and subscription requests, and dispatches a worker",
+      "assertionName": "Worker form submits a named worker task",
+      "assertionMarker": "Dispatch worker"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1517",
+        "component": "App",
+        "tag": "Input",
+        "events": "onChange"
+      },
+      "testTitle": "saves context, retries coordinator and subscription requests, and dispatches a worker",
+      "assertionName": "Worker title is sent to the project worker endpoint",
+      "assertionMarker": "Worker title"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1523",
+        "component": "App",
+        "tag": "Input",
+        "events": "onChange"
+      },
+      "testTitle": "saves context, retries coordinator and subscription requests, and dispatches a worker",
+      "assertionName": "Worker task is sent to the project worker endpoint",
+      "assertionMarker": "Worker task"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1529",
+        "component": "App",
+        "tag": "Button",
+        "events": ""
+      },
+      "testTitle": "saves context, retries coordinator and subscription requests, and dispatches a worker",
+      "assertionName": "Dispatched worker appears in the selected project",
+      "assertionMarker": "Dispatch worker"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1553",
+        "component": "App",
+        "tag": "form",
+        "events": "onSubmit"
+      },
+      "testTitle": "saves context, retries coordinator and subscription requests, and dispatches a worker",
+      "assertionName": "Subscription form retries a rejected schedule request",
+      "assertionMarker": "Arm subscription"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1557",
+        "component": "App",
+        "tag": "Input",
+        "events": "onChange"
+      },
+      "testTitle": "saves context, retries coordinator and subscription requests, and dispatches a worker",
+      "assertionName": "Subscription name is retained for the retry",
+      "assertionMarker": "Subscription name"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1565",
+        "component": "App",
+        "tag": "NativeSelect",
+        "events": "onChange"
+      },
+      "testTitle": "saves context, retries coordinator and subscription requests, and dispatches a worker",
+      "assertionName": "Schedule kind selection is sent to the API",
+      "assertionMarker": "Subscription kind"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1583",
+        "component": "App",
+        "tag": "Input",
+        "events": "onChange"
+      },
+      "testTitle": "saves context, retries coordinator and subscription requests, and dispatches a worker",
+      "assertionName": "Schedule interval is included in the subscription payload",
+      "assertionMarker": "Subscription interval"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1592",
+        "component": "App",
+        "tag": "Button",
+        "events": ""
+      },
+      "testTitle": "saves context, retries coordinator and subscription requests, and dispatches a worker",
+      "assertionName": "Armed schedule appears in the selected project",
+      "assertionMarker": "Arm subscription"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1623",
+        "component": "App",
+        "tag": "Dialog",
+        "events": "onOpenChange"
+      },
+      "testTitle": "creates a project from the toolbar and persists the exact project fields",
+      "assertionName": "Create dialog opens and closes through its controlled state",
+      "assertionMarker": "New project dialog"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1640",
+        "component": "App",
+        "tag": "form",
+        "events": "onSubmit"
+      },
+      "testTitle": "creates a project from the toolbar and persists the exact project fields",
+      "assertionName": "Create project form submits the populated dialog",
+      "assertionMarker": "Create project dialog form"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1647",
+        "component": "App",
+        "tag": "Input",
+        "events": "onChange"
+      },
+      "testTitle": "creates a project from the toolbar and persists the exact project fields",
+      "assertionName": "Project name becomes the returned project heading",
+      "assertionMarker": "Project name"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1662",
+        "component": "App",
+        "tag": "Input",
+        "events": "onChange"
+      },
+      "testTitle": "creates a project from the toolbar and persists the exact project fields",
+      "assertionName": "Client or team value is included in the create payload",
+      "assertionMarker": "Client or team"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1677",
+        "component": "App",
+        "tag": "Input",
+        "events": "onChange"
+      },
+      "testTitle": "creates a project from the toolbar and persists the exact project fields",
+      "assertionName": "Owner value is included in the create payload",
+      "assertionMarker": "Owner"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1692",
+        "component": "App",
+        "tag": "Input",
+        "events": "onChange"
+      },
+      "testTitle": "creates a project from the toolbar and persists the exact project fields",
+      "assertionName": "Due date value is included in the create payload",
+      "assertionMarker": "Due date"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1706",
+        "component": "App",
+        "tag": "NativeSelect",
+        "events": "onChange"
+      },
+      "testTitle": "creates a project from the toolbar and persists the exact project fields",
+      "assertionName": "Execution target value is included in the create payload",
+      "assertionMarker": "Execution target"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1731",
+        "component": "App",
+        "tag": "Input",
+        "events": "onChange"
+      },
+      "testTitle": "creates a project from the toolbar and persists the exact project fields",
+      "assertionName": "Working folder value is included in the create payload",
+      "assertionMarker": "Working folder"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1746",
+        "component": "App",
+        "tag": "Textarea",
+        "events": "onChange"
+      },
+      "testTitle": "creates a project from the toolbar and persists the exact project fields",
+      "assertionName": "Description value is included in the create payload",
+      "assertionMarker": "Description"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1784",
+        "component": "App",
+        "tag": "Button",
+        "events": ""
+      },
+      "testTitle": "creates a project from the toolbar and persists the exact project fields",
+      "assertionName": "Create action posts and selects the new project",
+      "assertionMarker": "Create project"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1381",
+        "component": "App",
+        "tag": "form",
+        "events": "onSubmit"
+      },
+      "testTitle": "adds and removes a project member and saves model defaults through the host",
+      "assertionName": "Submitting the member form posts the exact member kind and id to the host",
+      "assertionMarker": "/projects/project-alpha/members"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1385",
+        "component": "App",
+        "tag": "NativeSelect",
+        "events": "onChange"
+      },
+      "testTitle": "adds and removes a project member and saves model defaults through the host",
+      "assertionName": "Member kind selection switches the id placeholder to the chosen kind",
+      "assertionMarker": "Member kind"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1399",
+        "component": "App",
+        "tag": "Input",
+        "events": "onChange"
+      },
+      "testTitle": "adds and removes a project member and saves model defaults through the host",
+      "assertionName": "Member id input is sent as the new member id and clears after the host accepts it",
+      "assertionMarker": "Member id"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1411",
+        "component": "App",
+        "tag": "Button",
+        "events": ""
+      },
+      "testTitle": "adds and removes a project member and saves model defaults through the host",
+      "assertionName": "Add member submits the member form",
+      "assertionMarker": "Add member"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1429",
+        "component": "App",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "adds and removes a project member and saves model defaults through the host",
+      "assertionName": "Remove deletes the host-resolved member and removes it from the list",
+      "assertionMarker": "Remove Launch crew"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1453",
+        "component": "App",
+        "tag": "form",
+        "events": "onSubmit"
+      },
+      "testTitle": "adds and removes a project member and saves model defaults through the host",
+      "assertionName": "Submitting the defaults form puts trimmed provider, model, and effort to the host",
+      "assertionMarker": "/projects/project-alpha/defaults"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1457",
+        "component": "App",
+        "tag": "Input",
+        "events": "onChange"
+      },
+      "testTitle": "adds and removes a project member and saves model defaults through the host",
+      "assertionName": "Default provider is trimmed before it is saved and reads back trimmed",
+      "assertionMarker": "Default provider"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1468",
+        "component": "App",
+        "tag": "Input",
+        "events": "onChange"
+      },
+      "testTitle": "adds and removes a project member and saves model defaults through the host",
+      "assertionName": "Default model is saved exactly",
+      "assertionMarker": "Default model"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1479",
+        "component": "App",
+        "tag": "NativeSelect",
+        "events": "onChange"
+      },
+      "testTitle": "adds and removes a project member and saves model defaults through the host",
+      "assertionName": "Default effort selection is saved and reads back",
+      "assertionMarker": "Default effort"
+    },
+    {
+      "row": {
+        "package": "projects",
+        "source_file": "apps-store/projects/ui/src/App.tsx",
+        "line": "1498",
+        "component": "App",
+        "tag": "Button",
+        "events": ""
+      },
+      "testTitle": "adds and removes a project member and saves model defaults through the host",
+      "assertionName": "Save defaults submits the defaults form and confirms with a toast",
+      "assertionMarker": "Save defaults"
+    }
+  ]
+}
