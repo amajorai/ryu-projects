@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ryu.projects",
+  "version": "0.2.0",
+  "description": "Projects are where long-running work lives: each project has a coordinator main thread, the bots and Groups working on it (each with its own main thread), shared context, model defaults, and the sessions they spawn.",
+  "author": {
+    "name": "Ryu",
+    "url": "https://ryuhq.com"
+  },
+  "homepage": "https://github.com/amajorai/ryu-projects",
+  "repository": "https://github.com/amajorai/ryu-projects",
+  "keywords": ["projects", "tasks", "planning", "delivery", "operations"],
+  "extensions": {
+    "com.ryuhq.ryu": {
+      "id": "@ryu/projects",
+      "displayName": "Projects"
+    }
+  }
+}
